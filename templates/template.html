@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>{{ tf }}</title>
+    </head>
+    <body>
+        <h1>
+            {{ tf }}
+        </h1>
+        <p>Note that this only works for students whose main page was titled "index.html". If these links do not work, please check for this student's work first in the student's folder, and then on Gradescope </p>
+        <ul>
+            {% for student, page in students.items() %}
+                <li>
+                    <a href="{{ page }}">{{ student }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>
