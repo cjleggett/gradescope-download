@@ -1,0 +1,6 @@
+name: gradescope
+dependencies:
+  - jupyter
+  - selenium
+  - webdriver-manager
+  - pandas
