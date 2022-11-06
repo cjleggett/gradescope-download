@@ -54,6 +54,8 @@ def download_submission_csv(driver):
         found = False
         for file in files:
             if ".csv" in file:
+                if not os.path.isdir(f"downloads/csv"):
+                    os.makedirs(f"downloads/csv")
                 os.rename(f"downloads/{file}", f"downloads/csv/scores.csv")
                 found = True
         if found:

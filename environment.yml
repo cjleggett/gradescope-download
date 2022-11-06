@@ -3,4 +3,3 @@ dependencies:
   - jupyter
   - selenium
   - webdriver-manager
-  - pandas

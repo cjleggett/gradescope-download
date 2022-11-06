@@ -10,7 +10,7 @@ This code is meant to download submissions from Gradescope, sort them by TF, and
 1. Configure Environment
    1. Clone/Fork this repository, then navigate to the appropriate directory
    2. Use `conda env create -f environment.yml` to create the new environment
-   3. Activate your new environment with `conda activate [environment_name]`
+   3. Activate your new environment with `conda activate gradescope_download`
 2. Provide Environment Variables: Create a file titled `.env` and fill it using the template below:
 ```
 USERNAME=[Your Gradescope Username]
