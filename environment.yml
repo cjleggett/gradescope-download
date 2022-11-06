@@ -1,4 +1,4 @@
-name: gradescope
+name: gradescope_download
 dependencies:
   - jupyter
   - selenium
