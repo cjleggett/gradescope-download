@@ -8,7 +8,7 @@
         <h1>
             {{ tf }}
         </h1>
-        <p>Note that this only works for students whose main page was titled "index.html". If these links do not work, please check for this student's work first in the student's folder, and then on Gradescope </p>
+        <p>Note that this only works for students whose main page was titled "index.html". If these links do not work, please check the files in the student's folder for work not titled "index.html". Some submissions are too large to download. In this case, the link will take you to the Gradescope submission where you can take a look at the student's code but unfortunately can't see their site. </p>
         <ul>
             {% for student, page in students.items() %}
                 <li>
@@ -16,5 +16,8 @@
                 </li>
             {% endfor %}
         </ul>
+        <p>
+            I'd like to stress that this is an experimental way of distributing student submissions for grading, so if one of your students is missing from the above list, please check for their submission on Gradescope before assuming there is no submission.
+        </p>
     </body>
 </html>
