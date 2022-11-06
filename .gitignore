@@ -1,3 +1,4 @@
 .env
 .idea/
 downloads/
+.DS_Store
