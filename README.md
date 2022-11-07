@@ -3,7 +3,7 @@
 ### Connor Leggett
 ### 11/06/2022
 
-This code is meant to download submissions from Gradescope, sort them by TF, and create a homepage for each TF to provide easier access to homepage submissions.
+This code is meant to download submissions from Gradescope, sort them by TF, and create a homepage for each TF to provide easier access to homepage submissions. This is necessary because while Gradescope does allow you to download all submissions at once, the download can take a couple of hours, and if any changes occur such as new submissions or submissions being graded, the process is terminated. With a class of 500+ students, it is nearly impossible to go several hours without any changes being made.
 
 ## Setup
 

@@ -93,6 +93,8 @@ def setup_tf_folders(tfs):
 
 def manage_one_sub(tf, student, link, sub_id, driver):
     """Downloads one submission, unzips it, and places it in the correct file"""
+    # Necessary to get rid of previous "file too large" message on page
+    driver.get(BASE_URL)
     driver.get(link)
     try:
         alert = driver.find_element("css selector", ".l-header > div")
@@ -104,7 +106,11 @@ def manage_one_sub(tf, student, link, sub_id, driver):
         if f"{sub_id}.zip" in os.listdir("downloads/"):
             break
     os.rename(f"downloads/{sub_id}.zip", f"downloads/{tf}/{student}.zip")
-    shutil.unpack_archive(f"downloads/{tf}/{student}.zip", f"downloads/{tf}/{student}")
+    try:
+        shutil.unpack_archive(f"downloads/{tf}/{student}.zip", f"downloads/{tf}/{student}")
+        os.remove(f"downloads/{tf}/{student}.zip")
+    except:
+        print(f"Could not Unzip {student} in {tf}")
     return True
 
 def download_subs(tfs, driver):
