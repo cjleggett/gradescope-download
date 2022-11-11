@@ -117,10 +117,12 @@ def download_subs(tfs, driver):
     """Download all submissions, keeping track of which are too big"""
     too_big = set()
     updated_tfs = set()
+    sub_count = 0
     for tf, students in tfs.items():
         for student in students:
+            sub_count += 1
             if student["sub_time"] > last_sweep:
-                print(f"Downloading Submission {student['submission_id']}")
+                print(f"Downloading Submission {sub_count}")
                 updated_tfs.add(tf)
                 if not manage_one_sub(tf, student["student"], student["link"], student["submission_id"], driver):
                     too_big.add(student["student"])
